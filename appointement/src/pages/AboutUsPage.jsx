@@ -1,0 +1,10 @@
+import React from 'react';
+
+export default function AboutUsPage() {
+  return (
+    <div>
+      <h1>About Us</h1>
+      {/* Your content goes here */}
+    </div>
+  );
+}

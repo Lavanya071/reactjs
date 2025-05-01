@@ -1,0 +1,635 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7fafc; /* Tailwind's bg-blue-50 equivalent */
+  color: #2d3748; /* Tailwind's text-gray-900 equivalent */
+}
+
+h1 {
+  font-size: 2.25rem; /* Tailwind's text-4xl equivalent */
+  font-weight: 700;   /* Tailwind's font-bold equivalent */
+  text-align: center;
+  margin-bottom: 1.5rem; /* Tailwind's mb-6 equivalent */
+}
+
+form {
+  background-color: #fff; /* White background for the form */
+  padding: 1.5rem;         /* Tailwind's p-6 equivalent */
+  border-radius: 1rem;     /* Rounded corners */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 0.75rem;        /* Tailwind's p-2 equivalent */
+  margin-top: 0.25rem;     /* Tailwind's mt-1 equivalent */
+  border: 1px solid #cbd5e0; /* Tailwind's border-gray-300 equivalent */
+  border-radius: 0.5rem;   /* Rounded borders */
+  font-size: 1rem;         /* Font size */
+  background-color: #f9fafb; /* Tailwind's bg-gray-50 equivalent */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+  outline: none;
+  border-color: #3182ce;    /* Tailwind's border-blue-500 equivalent */
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5); /* Focus effect */
+}
+/* Container for buttons */
+button-container {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 1rem; /* Optional: Add space between buttons */
+}
+
+/* Small button styles (same as before) */
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  background-color: #3182ce;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2b6cb0;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+
+/* Flex Layout for Date & Time Fields */
+.flex {
+  display: flex;
+  gap: 1rem; /* Gap between the fields */
+}
+
+.flex > div {
+  flex: 1; /* Allow each field to take equal space */
+}
+
+label {
+  font-weight: 600; /* Bold labels */
+  margin-bottom: 0.5rem; /* Tailwind's mb-2 equivalent */
+  display: block; /* Block-level label */
+}
+
+.space-y-4 > * {
+  margin-bottom: 1rem; /* Space between fields */
+}
+
+/* Header Styling */
+header {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d3748; /* Text color */
+}
+
+header button {
+  padding: 0.75rem 1.5rem; /* Tailwind's px-4 py-2 equivalent */
+  background-color: #3182ce;
+  color: white;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+header button:hover {
+  background-color: #2b6cb0;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Custom Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #1D4ED8;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+input, select {
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #D1D5DB;
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Header Styling */
+header {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+header .navbar-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+header .navbar-buttons button {
+  background-color: #3B82F6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+header .navbar-buttons button:hover {
+  background-color: #2563EB;
+}
+
+header .navbar-buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Doctor Card Styling */
+.doctor-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.doctor-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.doctor-card .rating {
+  display: flex;
+  align-items: center;
+  color: #FBBF24;
+}
+
+.doctor-card .rating span {
+  margin-left: 0.5rem;
+  color: #6B7280;
+}
+
+.doctor-card .about-doctor,
+.doctor-card .specialization,
+.doctor-card .experience,
+.doctor-card .fees-time {
+  margin-top: 1.5rem;
+}
+
+.doctor-card .about-doctor p,
+.doctor-card .specialization p,
+.doctor-card .experience ul,
+.doctor-card .fees-time select {
+  color: #6B7280;
+  font-size: 1rem;
+}
+
+.doctor-card .about-doctor p {
+  margin-top: 0.5rem;
+}
+
+.doctor-card .experience ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.doctor-card .fees-time select {
+  margin-top: 1rem;
+}
+
+.doctor-card .fees-time button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #3B82F6;
+  color: white;
+  border-radius: 0.375rem;
+  width: 100%;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.doctor-card .fees-time button:hover {
+  background-color: #2563EB;
+}
+
+.doctor-card .fees-time button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .doctor-card {
+    padding: 1.5rem;
+  }
+
+  .doctor-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .doctor-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .doctor-card .rating {
+    margin-top: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Global Styles */
+body {
+  background-color: #f8fafc; /* Light background for the page */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #4b5563; /* Tailwind gray-600 */
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Container for the Filters Section */
+.filter-container {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.filter-container label {
+  font-weight: bold;
+  color: #374151; /* Tailwind gray-700 */
+}
+
+.filter-container input,
+.filter-container select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #e5e7eb; /* Tailwind gray-200 */
+  border-radius: 8px;
+}
+
+/* Container for the Doctor Profile Cards */
+.doctor-card-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  padding: 24px;
+}
+
+/* Style for each Doctor Profile Card */
+.doctor-card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.doctor-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.doctor-rating {
+  color: #f59e0b; /* Tailwind yellow-500 */
+  margin-top: 8px;
+}
+
+.doctor-info {
+  color: #4b5563; /* Tailwind gray-600 */
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.doctor-specialization {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-top: 8px;
+}
+
+/* Button Styles */
+.button {
+  background-color: #3b82f6; /* Tailwind blue-600 */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2563eb; /* Tailwind blue-700 */
+}
+
+.chat-button {
+  background-color: #10b981; /* Tailwind green-600 */
+}
+
+.chat-button:hover {
+  background-color: #059669; /* Tailwind green-700 */
+}
+
+.view-profile-button {
+  background-color: #1e3a8a; /* Tailwind blue-800 */
+}
+
+.view-profile-button:hover {
+  background-color: #1d4ed8; /* Tailwind blue-900 */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .doctor-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .filter-container {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Medium Screen Responsiveness */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .doctor-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Screen Responsiveness */
+@media (min-width: 1024px) {
+  .doctor-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+
+
+/* Global Styles */
+body {
+  background-color: #f8fafc; /* Light background for the page */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #4b5563; /* Tailwind gray-600 */
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Container for the Filters Section */
+.filter-container {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.filter-container label {
+  font-weight: bold;
+  color: #374151; /* Tailwind gray-700 */
+}
+
+.filter-container input,
+.filter-container select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #e5e7eb; /* Tailwind gray-200 */
+  border-radius: 8px;
+}
+
+/* 3 Doctor Profile Containers - Updated to be in one row */
+.doctor-card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px;
+  flex-wrap: wrap; /* Ensures the layout is responsive */
+}
+
+/* Style for each Doctor Profile Card */
+/* Doctor Card Styling */
+.doctor-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  width: 250px;
+  height: 250px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Star shape */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+.doctor-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem; /* Space between image and name */
+}
+
+.doctor-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem; /* Space between name and rating */
+}
+
+.doctor-rating {
+  font-size: 1rem;
+  color: #f59e0b; /* Tailwind yellow-500 for star color */
+  margin-bottom: 1rem; /* Space between rating and buttons */
+}
+
+.doctor-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.doctor-actions button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-consultation-button {
+  background-color: #3b82f6; /* Tailwind blue-600 */
+}
+
+.chat-consultation-button {
+  background-color: #10b981; /* Tailwind green-600 */
+}
+
+.doctor-actions button:hover {
+  background-color: #2563eb; /* Hover for blue */
+}
+
+.chat-consultation-button:hover {
+  background-color: #059669; /* Hover for green */
+}
+
+
+.view-profile-button {
+  background-color: #1e3a8a; /* Tailwind blue-800 */
+}
+
+.view-profile-button:hover {
+  background-color: #1d4ed8; /* Tailwind blue-900 */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .doctor-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doctor-card {
+    max-width: 100%; /* Ensure the card takes up the full width on small screens */
+    margin-bottom: 24px;
+  }
+
+  .filter-container {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Medium Screen Responsiveness */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .doctor-card-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .doctor-card {
+    max-width: 48%; /* Ensure cards take up 50% of the row on medium-sized screens */
+  }
+}
+
+/* Large Screen Responsiveness */
+@media (min-width: 1024px) {
+  .doctor-card-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .doctor-card {
+    max-width: 32%; /* Ensure the cards take up one third of the row */
+  }
+}
